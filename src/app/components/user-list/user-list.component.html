@@ -1,0 +1,40 @@
+<p>user-list works!</p>
+ <!-- @for (item of items; track item) {
+
+<table *ngFor="" border="2px">
+    <tr>
+        <td>Id</td>
+        <td>anu</td>
+    </tr>
+</table> -->
+<table border="2px">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>User Street</th>
+      <th>User City</th>
+      <th>User Zipcode</th>
+        </tr>
+  </thead>
+  <tbody>
+    @for (user of userData; track user) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address.street }}</td>
+        <td>{{ user.address.city }}</td>
+         <td>{{ user.address.zipcode }}</td>
+      </tr>
+    }
+    @empty {
+      <tr>
+        <td colspan="3">No users found</td>
+      </tr>
+    }
+  </tbody>
+</table>

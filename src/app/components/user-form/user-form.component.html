@@ -1,0 +1,13 @@
+<p>user-form works!</p>
+<form [formGroup]="userRegisterForm" (ngSubmit)="onSubmit()">
+  <label>Username:</label>
+  <input type="text" formControlName="username"><br><br>
+  
+  <label>Email:</label>
+  <input type="email" formControlName="email"><br><br>
+  
+  <label>Contact:</label>
+  <input type="contact" formControlName="contact"><br><br>
+  
+  <button type="submit" [disabled]="!userRegisterForm.valid">Register</button>
+</form>
